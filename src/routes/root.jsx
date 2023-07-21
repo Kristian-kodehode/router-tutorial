@@ -13,8 +13,8 @@ export async function action() {
   return redirect(`/contacts/${contact.id}/edit`);
 }
 
-export async function loader({ requerst }) {
-  const url = new URL(requerst.url);
+export async function loader({ request }) {
+  const url = new URL(request.url);
   const q = url.searchParams.get("q");
   const contacts = await getContacts(q);
   return { contacts };
