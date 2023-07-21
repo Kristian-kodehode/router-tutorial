@@ -20,7 +20,6 @@ function Contact() {
       <div>
         <img key={contact.avatar} src={contact.avatar || null} />
       </div>
-
       <div>
         <h1>
           {contact.first || contact.last ? (
@@ -68,6 +67,9 @@ function Favorite({ contact }) {
   const fetcher = useFetcher();
   // yes, this is a `let` for later
   let favorite = contact.favorite;
+  if (fetcher.formData) {
+    favorite = fetcher.formData.get("favorite") === "true";
+  }
   return (
     <fetcher.Form method="post">
       <button
