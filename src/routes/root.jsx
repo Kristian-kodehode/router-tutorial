@@ -1,4 +1,3 @@
-// import { useEffect } from "react";
 import {
   Outlet,
   NavLink,
@@ -27,9 +26,6 @@ function Root() {
   const navigation = useNavigation();
   const submit = useSubmit();
 
-  // useEffect(() => {
-  //   document.getElementById("q").value = q;
-  // }, [q]);
   return (
     <>
       <div id="sidebar">
