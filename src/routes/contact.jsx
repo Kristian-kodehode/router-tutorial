@@ -13,7 +13,7 @@ export async function loader({ params }) {
   if (!contact) {
     throw new Response("", {
       status: 404,
-      statusText: "Not Found",
+      statusText: "Page Not Found",
     });
   }
   return { contact };
