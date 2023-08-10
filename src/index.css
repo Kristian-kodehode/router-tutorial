@@ -27,6 +27,7 @@ body {
   line-height: 1.5;
   color: #121212;
 }
+
 textarea,
 input,
 button {
@@ -43,6 +44,7 @@ button {
 button {
   color: #3992ff;
   font-weight: 500;
+  cursor: pointer;
 }
 
 textarea:hover,
